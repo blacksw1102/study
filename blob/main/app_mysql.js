@@ -1,5 +1,6 @@
 const express = require("express");
-require("dotenv").config({ path: "mysql/.env" }); // mysql 폴더에 있는 .env 파일을 찾아서 환경변수를 설정
+// mysql 폴더에 있는 .env 파일을 찾아서 환경변수를 설정
+require("dotenv").config({ path: "mysql/.env" });
 const mysql = require("./mysql");
 const app = express();
 
@@ -22,5 +23,16 @@ app.get("/api/customers", async (req, res) => {
 
 app.post("/api/customer/insert", async (req, res) => {
   const result = await mysql.query("customerInsert", req.body.param);
+  res.send(result);
+});
+
+app.put("/api/customer/update", async (req, res) => {
+  const result = await mysql.query("customerUpdate", req.body.param);
+  res.send(result);
+});
+
+app.delete("/api/customer/delete/:id", async (req, res) => {
+  const { id } = req.params;
+  const result = await mysql.query("customerDelete", id);
   res.send(result);
 });
