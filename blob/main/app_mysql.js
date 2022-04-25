@@ -1,6 +1,6 @@
 const express = require("express");
+require("dotenv").config({ path: "mysql/.env" }); // mysql 폴더에 있는 .env 파일을 찾아서 환경변수를 설정
 const mysql = require("./mysql");
-
 const app = express();
 
 app.listen(3000, () => {
