@@ -12,5 +12,21 @@ app.listen(3000, () => {
 
 app.get("/customers", async (req, res) => {
   console.log(await Customer.find());
-  console.log(await Customer.find({ name: "John Doe" }));
+
+  // # Model find()
+  // await MyModel.find({}); // 전체 문서 모두 조회
+  // await MyModel.find({ name : 'john', age : { $gte : 18 } }).exec(); // name이 john이고 age가 18보다 큰 문서 조회
+  // MyModel.find({ name : 'john', age : { %gte : 18 } }, function(err, docs) {}); // 문서 조회 결과를 콜백 함수로 처리
+  // await MyModel.find({ name : /john/i }, 'name email').exec(); // name에 john이 포함되면, 문서에서 name 및 email 필드를 조회
+  // await MyModel.find({ name : /john/i }, null, { skip : 10 }).exec(); // name에 john이 포함되면, 첫 10개의 데이터를 생략하고 11번째부터 문서를 조회
+
+  // # Model.findById()
+  // await MyModel.findById(id).exec(); // 주어진 id 값에 해당하는 문서 한 건 조회
+  // MyModel.findById(id, function(err, doc) {}); // 쿼리 결과를 콜백 함수로 전달
+  // await MyModel.findById(id, 'name email').exec(); // 주어진 id 값에 해당하는 문서에서 name 및 email 필드를 조회
+
+  // # Model.findOne()
+  // await MyModel.findOne({ name : "John" }).exec(); // name이 John인 문서 한 건만 조회
+  // MyModel.findOne({ name : 'John' }, function(err, doc) {}); // 쿼리 결과를 콜백 함수로 전달
+  // await MyModel.findOne({ name : 'John' }, 'name email').exec(); // name이 John인 문서의 name 및 email 조회
 });
