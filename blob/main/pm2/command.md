@@ -1,0 +1,13 @@
+- pm2 list
+- pm2 stop app1.js
+- pm2 restart app1.js
+- pm2 reload app1.js
+- pm2 delete app1.js
+- pm2 stop app1.js
+- pm2 logs
+- pm2 monit
+- pm2 start app1.js -i 4
+- pm2 start app1.js -i max
+- pm2 init simple
+- pm2 start ecosystem.config.js --only app1
+- pm2 start ecosystem.config.js --only "app1,app3"
