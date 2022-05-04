@@ -1,5 +1,5 @@
-require("dotenv").config({ path: "nodemailer/.env" }); // nodemailer 폴더에 있는 .env 파일을 환경 변수로 설정
-const nodemailer = require("./nodemailer");
+require("dotenv").config({ path: "../nodemailer/.env" }); // nodemailer 폴더에 있는 .env 파일을 환경 변수로 설정
+const nodemailer = require("../nodemailer");
 const express = require("express");
 const app = express();
 
@@ -15,6 +15,6 @@ app.listen(3000, () => {
 });
 
 app.post("/api/email", async (req, res) => {
-  const r = await nodemailer.send(req.body.param);
-  res.send(r);
+  const data = await nodemailer.send(req.body);
+  res.send(data);
 });

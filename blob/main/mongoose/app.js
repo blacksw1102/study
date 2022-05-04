@@ -1,6 +1,6 @@
 const express = require("express");
-const mongodb = require("./mongoose");
-const Customer = require("./mongoose/schemas/customer");
+const mongodb = require("../mongoose");
+const Customer = require("../mongoose/schemas/customer");
 const app = express();
 
 // request body를 json으로 파싱 처리

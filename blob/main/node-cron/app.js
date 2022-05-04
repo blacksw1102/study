@@ -1,8 +1,8 @@
 const cron = require("node-cron");
-require("dotenv").config({ path: "nodemailer/.env" });
-const nodemailer = require("./nodemailer");
-require("dotenv").config({ path: "mysql/.env" });
-const mysql = require("./mysql");
+require("dotenv").config({ path: "../nodemailer/.env" });
+const nodemailer = require("../nodemailer");
+require("dotenv").config({ path: "../mysql/.env" });
+const mysql = require("../mysql");
 
 // 스케줄 포맷 : 초(생략 가능), 분, 시, 일, 월, 요일
 cron.schedule("* * * * *", async () => {
