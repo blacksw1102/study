@@ -43,8 +43,9 @@ const getCryptoPassword = async (plainPassword, salt) => {
 
 let password = "test1234!";
 createCryptoPassword(password).then((data) => {
-  console.log("createCryptoPassword => ", data);
+  // 실제 사용시에는 이 부분에서 암호화한 패스워드와, salt 값을 DB에 저장시켜야함
 
+  console.log("createCryptoPassword => ", data);
   getCryptoPassword(password, data.salt).then((data) => {
     console.log("getCryptoPassword => ", data);
   });
