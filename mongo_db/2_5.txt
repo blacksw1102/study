@@ -1,0 +1,38 @@
+# mongo 셸 실행
+mongo
+
+# 데이터베이스 조회
+db
+
+# 데이터베이스 선택
+use video
+
+# db에서 컬렉션 접근
+db.movies
+
+# 컬렉션에 도큐먼트 추가
+movie = 
+{
+    "title" : "Star Wars: Episode IV - A New Hope",
+    "director" : "George Lucas",
+    "year" : 1977
+}
+
+db.movies.insertOne(movie)
+{
+    "acknowledged" : true,
+    "insertedId" : ObjectId("5721794b349c32b32a012b11");
+}
+
+# 도큐먼트 조회
+db.movies.find().pretty()
+
+# 단일 도큐먼트 조회
+db.movies.findOne()
+
+# 도큐먼트 갱신
+db.movies.updateOne({title: "Star Wars: Episode IV - A New Hope"}, {$set : {reviews: []}})
+
+# 도큐먼트 삭제
+db.movies.deleteOne({title: "Star Wars: Episode IV - A New Hope" })
+db.movies.deleteMany({title: "Star Wars: Episode IV - A New Hope" })
