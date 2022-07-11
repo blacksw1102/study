@@ -11,7 +11,7 @@ https://github.com/microsoftarchive/redis/releases
 
 ![Redis 설치 파일 확인](https://i.imgur.com/SvtxtdC.png)
 
-![Redis 서비스 확인](https://i.imgur.com/fqZxUqa.png)
+![Redis 서비스 확인](https://postfiles.pstatic.net/MjAyMjA3MTFfMTQ1/MDAxNjU3NTQzNTQzMDIw.kL0ljShlrWjmmcMHZWlM_xIwyYJJL4_TmvQXMkTg-S8g.mzgpQivRN0HJ0kjtLYBb7OZyS0R118cq6SfIw70wdyUg.PNG.blacksw1102/SE-81f23728-5904-4965-b141-ee1053f949de.png?type=w773)
 
 ![PING/PONG 확인](https://i.imgur.com/FY6tAyV.png)
 
