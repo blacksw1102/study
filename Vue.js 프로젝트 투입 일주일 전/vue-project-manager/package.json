@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "axios": "^0.27.2",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3",
@@ -41,12 +42,27 @@
       "parser": "@babel/eslint-parser"
     },
     "rules": {
-      "quotes": [ 2, "single", { "avoidEscape": false } ],
-      "semi": [2, "never"],
-      "indent": ["error", 2],
+      "quotes": [
+        2,
+        "single",
+        {
+          "avoidEscape": false
+        }
+      ],
+      "semi": [
+        2,
+        "never"
+      ],
+      "indent": [
+        "error",
+        2
+      ],
       "vue/multi-word-component-names": "off",
       "vue/valid-template-root": "off",
-      "eol-last": "off"
+      "eol-last": "off",
+      "no-unused-vars": "off",
+      "no-trailing-spaces": "off",
+      "vue/no-unused-components": "off"
     }
   },
   "browserslist": [

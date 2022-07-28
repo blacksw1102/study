@@ -20,7 +20,20 @@
     <router-link to="/eventChange">EventChange</router-link> |
     <router-link to="/eventKey">EventKey</router-link> |
     <router-link to="/computed">Computed</router-link> |
-    <router-link to="/watch">Watch</router-link>
+    <router-link to="/watch">Watch</router-link> |
+    <router-link to="/dataBindingList2">DataBindingList2</router-link> |
+    <router-link to="/nestedComponent">NestedComponent</router-link> |
+    <router-link to="/parentComponent">ParentComponent</router-link> |
+    <router-link to="/parentComponent3">ParentComponent3</router-link> |
+    <router-link to="/parentComponent4">ParentComponent4</router-link> |
+    <router-link to="/parentComponent5">ParentComponent5</router-link> |
+    <router-link to="/provideInject">ProvideInject</router-link> |
+    <router-link to="/calculator">Calculator</router-link> |
+    <router-link to="/compositionAPI">CompositionAPI</router-link> |
+    <router-link to="/compositionAPI2">CompositionAPI2</router-link> |
+    <router-link to="/compositionAPI3">CompositionAPI3</router-link> |
+    <router-link to="/compositionAPI4">CompositionAPI4</router-link> |
+    <router-link to="/compositionAPIProvide">CompositionAPIProvide</router-link>
   </nav>
   <router-view/>
 </template>
